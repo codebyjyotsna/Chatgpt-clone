@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatGPT Clone</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="https://chat.openai.com/favicon.ico" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="new-chat" id="new-chat">+ New Chat</div>
+      <div class="export-chat" id="export-chat">📄 Export Chat</div>
+      <div class="chat-titles">
+        <div class="chat-item">Welcome Chat</div>
+      </div>
+    </aside>
+
+    <main class="chat-area">
+      <div class="chat-window" id="chat-window"></div>
+      <form id="chat-form" class="input-area">
+        <textarea id="user-input" rows="1" placeholder="Send a message..." autocomplete="off"></textarea>
+        <button type="submit" aria-label="Send Message">➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

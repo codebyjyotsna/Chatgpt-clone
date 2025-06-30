@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #343541;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+}
+.layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background-color: #202123;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #3f3f44;
+}
+.new-chat,
+.export-chat {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #4d4d4f;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #343541;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+}
+.new-chat:hover,
+.export-chat:hover {
+  background-color: #3f414c;
+}
+.chat-item {
+  padding: 0.75rem;
+  border-radius: 5px;
+  background-color: #343541;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.chat-item:hover {
+  background-color: #2a2b32;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #343541;
+}
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  scroll-behavior: smooth;
+}
+
+/* Messages */
+.message {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+.message.user {
+  display: flex;
+  justify-content: flex-end;
+}
+.message.user .bubble {
+  background-color: #10a37f;
+  color: white;
+  max-width: 70%;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: right;
+}
+.message.bot {
+  display: flex;
+  justify-content: flex-start;
+}
+.message.bot .bubble {
+  background-color: #444654;
+  color: white;
+  max-width: 70%;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  animation: typing 0.3s ease-in-out;
+}
+.bubble {
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  padding: 1rem 2rem;
+  border-top: 1px solid #4d4d4f;
+  background-color: #343541;
+}
+.input-area textarea {
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #40414f;
+  color: white;
+}
+.input-area button {
+  margin-left: 1rem;
+  background-color: #10a37f;
+  border: none;
+  color: white;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.input-area button:hover {
+  background-color: #0e8e70;
+}
+
